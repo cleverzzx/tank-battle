@@ -285,7 +285,7 @@
         class Game {
             constructor() {
                 this.map = JSON.parse(JSON.stringify(MAPS[0]));
-                this.player = new Tank(240, 480, 'player');
+                this.player = new Tank(234, 442, 'player');
                 this.enemies = [];
                 this.bullets = [];
                 this.keys = {};
@@ -311,9 +311,9 @@
                 requestAnimationFrame(this.loop);
             }
             spawnEnemy() {
-                const positions = [0, 240, 480];
+                const positions = [52, 286, 442];
                 const x = positions[Math.floor(Math.random() * positions.length)];
-                const enemy = new Tank(x, 0, 'enemy');
+                const enemy = new Tank(x, 26, 'enemy');
                 enemy.dir = 'down';
                 this.enemies.push(enemy);
             }
@@ -475,7 +475,7 @@
             }
             restart() {
                 this.map = JSON.parse(JSON.stringify(MAPS[0]));
-                this.player = new Tank(240, 480, 'player');
+                this.player = new Tank(234, 442, 'player');
                 this.enemies = [];
                 this.bullets = [];
                 this.score = 0;
